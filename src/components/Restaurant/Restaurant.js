@@ -5,10 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 const Restaurant = (props) => {
 
     const { strMeal, idMeal, strCategory, strMealThumb, strInstructions, strArea } = props.meal;
     console.log(props);
+    const url = `/food/${idMeal}`
     return (
         <div className="mt-4 col-md-3">
             <Card sx={{ maxWidth: 345 }}>
@@ -30,7 +32,8 @@ const Restaurant = (props) => {
                 </CardContent>
                 <CardActions>
                     <Button size="small">Buy</Button>
-                    <Button size="small">More Details</Button>
+                    <Link to={url}> <Button size="small">More Details</Button></Link>
+
                 </CardActions>
             </Card>
         </div>

@@ -33,9 +33,11 @@ const Restaurants = () => {
             </Box>
             <div className="row">
 
+
                 {
                     meals.map(meal => <Restaurant key={meal.idMeal} meal={meal}></Restaurant>)
                 }
+
 
 
             </div>
